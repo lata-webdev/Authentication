@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main-2</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        #app {
+            background-color: gray;
+            height: 750px;
+            width: 100vw;
+            position: relative;
+        }
+
+        #login-container {
+            width: 35vw;
+            height: 750px;
+            background-color: whitesmoke;
+            position: relative;
+            left: 35%;
+        }
+
+        #navbar {
+            height: 54px;
+            background-color: coral;
+            align-items: center;
+            display: flex;
+        }
+
+        #TextContainer {
+            display: flex;
+            align-items: center;
+            gap: 200px;
+            /* Space between image and text */
+        }
+
+        #back {
+            height: 20px;
+            width: 20px;
+            padding-left: 20px;
+        }
+
+        #reg {
+            font-size: 18px;
+            line-height: 1.5;
+            color: white;
+        }
+
+        #LanguageGroup {
+            margin-left: 100px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            /* Space between flag, text, and dropdown */
+        }
+
+        #AmericaFlag {
+            height: 25px;
+            width: 25px;
+        }
+
+        #English {
+            font-size: 18px;
+            line-height: 1.5;
+            color: white;
+        }
+
+        #Dropdown {
+            height: 25px;
+            width: 25px;
+        }
+
+        #login-Container-titles {
+            height: 60px;
+            background-color: coral;
+            cursor: pointer;
+        }
+
+        #Reg-title {
+            color: white;
+            padding-left: 20px;
+        }
+
+        #tabs {
+            margin-left: 130px;
+            display: flex;
+            align-items: center;
+            gap: 200px;
+            margin-top: 10px;
+
+        }
+
+        #phone-tab {
+            height: 30px;
+            width: 30px;
+        }
+
+        #mail-tab {
+            height: 30px;
+            width: 30px;
+        }
+
+        #login-container-text {
+            margin-left: 120px;
+            display: flex;
+            align-items: center;
+            gap: 200px;
+        }
+
+        #mobileicon {
+            height: 30px;
+            width: 30px;
+        }
+
+        #phoneInput-container {
+            margin-left: 30px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #dropdown {
+            margin-left: 30px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #countryCode {
+            height: 40px;
+            width: 60px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 3px 2px 8px grey;
+            cursor: pointer;
+        }
+
+        #Enterphone {
+            height: 40px;
+            width: 400px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 3px 2px 8px grey;
+        }
+
+        #passwordInput-container {
+            margin-left: 30px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #setpassword {
+            height: 40px;
+            width: 470px;
+            border-radius: 8px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border: none;
+            box-shadow: 3px 2px 8px grey;
+        }
+
+        #ConfirmPasswordInput-container {
+            margin-left: 30px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #Confirmpassword {
+            height: 40px;
+            width: 470px;
+            border-radius: 8px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border: none;
+            box-shadow: 3px 2px 8px grey;
+        }
+
+        #InvitationCode-container {
+            margin-left: 30px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #InvitationInput {
+            height: 40px;
+            width: 470px;
+            border-radius: 8px;
+            margin-left: 30px;
+            margin-top: 5px;
+            border: none;
+            box-shadow: 3px 2px 8px grey;
+        }
+
+        #invitationimg {
+            height: 30px;
+            width: 30px;
+        }
+
+        #Checkbox {
+            margin-top: 20px;
+            margin-left: 30px;
+            cursor: pointer;
+
+        }
+
+        #RegBtn {
+            height: 40px;
+            width: 250px;
+            background-color: coral;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+            margin-left: 145px;
+            margin-top: 30px;
+            box-shadow: 3px 2px 8px grey;
+            cursor: pointer;
+        }
+
+        #LoginBtn {
+            height: 40px;
+            width: 250px;
+            background-color: whitesmoke;
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+            margin-left: 145px;
+            margin-top: 20px;
+            border: 2px solid coral;
+            cursor: pointer;
+        }
+
+        #icons_Service {
+            height: 50px;
+            width: 50px;
+            margin-left: 900px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="login-container">
+            <nav id="navbar">
+                <!-- Back button and Register -->
+                <div id="TextContainer">
+                    <img src="back.png" id="back" alt="Back">
+                    <h2 id="reg">Register</h2>
+                </div>
+                <!-- Language selector -->
+                <div id="LanguageGroup">
+                    <img src="AmericaFlag.png" id="AmericaFlag" alt="AmericaFlag">
+                    <h2 id="English">English</h2>
+                    <img src="down-arrow.png" id="Dropdown" alt="Dropdown">
+                </div>
+
+            </nav>
+            <div id="login-Container-titles">
+                <h2 id="Reg-title">Register</h2>
+            </div>
+            <div id="tabs">
+                <div id="login-container-tab1">
+                    <a href="Mainnew.html"><img src="phone-call (1).png" id="phone-tab"></a>
+                </div>
+                <div id="login-container-tab2">
+                    <a href="MailPage.html"><img src="mail.png" id="mail-tab"></a>
+                </div>
+            </div>
+            <div id="login-container-text">
+                <font>Phone</font>
+                <font>Mail</font>
+            </div>
+            <hr>
+            <div id="login-container-form">
+                <!-- Phone number  -->
+                <div id="phoneInput-container">
+                    <img src="mail.png" id="mobileicon">
+                    <font id="phoneno">Email</font>
+                </div>
+                <div id="setpassword1">
+                    <input type="email" placeholder="Please enter your email address" id="setpassword">
+                </div>
+                <!-- Set password  -->
+                <div id="passwordInput-container">
+                    <img src="pwd.png" id="mobileicon">
+                    <font id="passwordtext">Set password</font>
+                </div>
+                <div id="setpassword1">
+                    <input type="text" placeholder="Please enter your password" id="setpassword">
+                </div>
+                <!-- Confirm password  -->
+                <div id="ConfirmPasswordInput-container">
+                    <img src="pwd.png" id="mobileicon">
+                    <font id="passwordtext">Confirm password</font>
+                </div>
+                <div id="Confirmpassword1">
+                    <input type="text" placeholder="Please enter your password" id="Confirmpassword">
+                </div>
+                <!-- Invitation Code  -->
+                <div id="InvitationCode-container">
+                    <img src="ma.png" id="invitationimg">
+                    <font id="Codetext">Invitation code</font>
+                </div>
+                <div id="InvitationInput1">
+                    <input type="text" placeholder="Invitation code" value="87643322" id="InvitationInput">
+                </div>
+                <!-- Checkbox -->
+                <div id="Checkbox">
+                    <input type="checkbox">
+                    <font>I have read and agree <b style="color:blue">[Privacy Agreement]</b></font>
+                </div>
+                <!-- Buttons -->
+                <div id="RegBtn1">
+                    <button id="RegBtn" onclick="register();">Register</button>
+                </div>
+                <!-- Buttons -->
+                <div id="LoginBtn1">
+                    <button id="LoginBtn">I have an account <b style="color:blue">Login</b></button>
+                </div>
+                <img id="icons_Service" src="icon_sevice.png" />
+            </div>
+        </div>
+    </div>
+    <script>
+        function register() {
+            window.location.href = "Lastlogin.html";
+        }
+    </script>
+</body>
+
+</html>

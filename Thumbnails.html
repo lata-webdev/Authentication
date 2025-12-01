@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            background-color: gray;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        #login-Container {
+            width: 35vw;
+            height: 100vh;
+            background-color: whitesmoke;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #introimg {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body onload="redirectToPage();">
+    <div id="app">
+        <div id="login-Container" align="center">
+            <img src="intropage.png" id="introimg">
+        </div>
+    </div>
+    <script>
+        // Function to redirect after 3 seconds
+        function redirectToPage() {
+            setTimeout(function () {
+                window.location.href = "Mainnew.html"; // Replace with your target page URL
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+
+    </script>
+</body>
+
+</html>

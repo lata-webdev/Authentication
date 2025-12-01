@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #contain {
+            width: 400px;
+            background-color: aliceblue;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #login {
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            color: orangered;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-container i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #888;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: darkblue;
+        }
+
+        .checkbox-container {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            flex: 1;
+            padding: 10px;
+            margin: 0 5px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .google {
+            background-color: #db4437;
+        }
+
+        .google:hover {
+            background-color: #c23321;
+        }
+
+        .facebook {
+            background-color: #4267B2;
+        }
+
+        .facebook:hover {
+            background-color: #365899;
+        }
+    </style>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="contain">
+        <h2 id="login">LOGIN</h2>
+        <!-- Email field -->
+        <div class="input-container">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email" required>
+        </div>
+        <!-- Password field -->
+        <div class="input-container">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required>
+        </div>
+        <!-- Submit button -->
+        <button class="btn" onclick="log();">Login</button>
+        <!-- Checkbox for confirmation -->
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" id="confirm" required>
+                I confirm that the information entered is correct.
+            </label>
+        </div>
+        <p>Or login with</p><br>
+        <!-- Social login options -->
+        <div class="social-login">
+            <button class="social-btn google" onclick="googleLogin();">
+                <i class="fab fa-google"></i> Google
+            </button>
+            <button class="social-btn facebook" onclick="facebookLogin();">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function log() {
+            const confirmCheckbox = document.getElementById("confirm");
+            if (confirmCheckbox.checked) {
+                alert("Login Successfully !!");
+                window.location.href = "Lastlogin.html";
+            } else {
+                alert("Please confirm the information before logging in.");
+            }
+        }
+
+        function googleLogin() {
+            alert("Google Login Clicked!");
+            // Add your Google login functionality here
+        }
+
+        function facebookLogin() {
+            alert("Facebook Login Clicked!");
+            // Add your Facebook login functionality here
+        }
+    </script>
+</body>
+
+</html>
